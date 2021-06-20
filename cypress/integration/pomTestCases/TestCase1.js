@@ -44,7 +44,6 @@ describe("Test Suite",function(){
         this.testData.categories.forEach(category => {
             headerSection.selectCategory(category).getProductCategoryHeader().should('equal',category)
         });
-    
     })
 
 
