@@ -9,6 +9,7 @@ describe("Test Suite",function(){
     const headerSection = new HeaderSection();
     const prdCategoryPage = new ProductCategoryPage();
     
+    //fetch the url from Cypress.json from baseUrl key
     beforeEach(function(){
         cy.visit("/")
     })
