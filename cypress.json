@@ -1,0 +1,15 @@
+{
+  "projectId": "d4hc71",
+  "baseUrl":"https://automationteststore.com/",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": true,
+    "json": false
+  },
+  "env":{
+    "testDataFile":"example.json"
+  }
+
+}
