@@ -3,6 +3,8 @@ import ProductCategoryPageRepo from '../pagesrepo/ProductCategoryPageRepo'
 import ShoppingCartPage from '../pages/ShoppingCartPage'
 /// <reference types="cypress" />
 
+
+//Locator provided in parent class
 export default class ProductCategoryPage extends ProductCategoryPageRepo{
 
     getProductCategoryHeader() {
