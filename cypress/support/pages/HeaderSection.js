@@ -1,6 +1,6 @@
 import  ProductCategoryPage from '../../support/pages/ProductCategoryPage'
 
-export default class HeaderSection{
+class HeaderSection{
 
     repo = {
         categoryMenuLinks : ".categorymenu>li>a"
@@ -12,3 +12,6 @@ export default class HeaderSection{
     }
 
 }
+
+const headerSection = new HeaderSection();
+export default headerSection;

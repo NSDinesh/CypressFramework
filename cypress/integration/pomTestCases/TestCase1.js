@@ -1,13 +1,10 @@
 
-import HeaderSection from '../../support/pages/HeaderSection'
-import ProductCategoryPage from '../../support/pages/ProductCategoryPage'
+import headerSection from '../../support/pages/HeaderSection'
+import productCategoryPage from '../../support/pages/ProductCategoryPage'
 
 /// <reference types="cypress" />
 
 describe("Test Suite",function(){
-
-    const headerSection = new HeaderSection();
-    const prdCategoryPage = new ProductCategoryPage();
     
     //fetch the url from Cypress.json from baseUrl key
     beforeEach(function(){
@@ -33,12 +30,12 @@ describe("Test Suite",function(){
         headerSection.selectCategory(category).getProductCategoryHeader().
         should('equal',this.testData.category)
 
-        prdCategoryPage.selectItemFromContentPanel(itemOnContentPanel)
+        productCategoryPage.selectItemFromContentPanel(itemOnContentPanel)
 
-        prdCategoryPage.getProductCategoryHeader(this.testData.contentItem).
+        productCategoryPage.getProductCategoryHeader(this.testData.contentItem).
         should('equal',itemOnContentPanel)
 
-        prdCategoryPage.selectAddToBag().addItemToCheckoutFromShoppingCart()
+        productCategoryPage.selectAddToBag().addItemToCheckoutFromShoppingCart()
     })
 
     it("verify all category section links are working",function(){

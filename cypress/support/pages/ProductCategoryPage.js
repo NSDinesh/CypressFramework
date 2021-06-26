@@ -3,7 +3,7 @@ import ProductCategoryPageRepo from '../pagesrepo/ProductCategoryPageRepo'
 import ShoppingCartPage from '../pages/ShoppingCartPage'
 /// <reference types="cypress" />
 
-export default class ProductCategoryPage extends ProductCategoryPageRepo{
+class ProductCategoryPage extends ProductCategoryPageRepo{
 
     getProductCategoryHeader() {
         return cy.get(this.header).children('span').eq(0).then((ele) => {
@@ -22,3 +22,6 @@ export default class ProductCategoryPage extends ProductCategoryPageRepo{
 
 
 }
+
+const productCategoryPage = new ProductCategoryPage();
+export default productCategoryPage;
