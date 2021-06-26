@@ -1,11 +1,11 @@
 
 export default class ShoppingCartPage{
     repo = {
-        "AddToCartButton" : "a[class='cart']"
+        "addToCartButton" : "a[class='cart']"
     }
 
     addItemToCheckoutFromShoppingCart(){
-        cy.get(this.repo.AddToCartButton).click()
+        cy.get(this.repo.addToCartButton).click()
     }
 
 }

@@ -1,10 +1,13 @@
 
-import headerSection from '../../support/pages/HeaderSection'
-import productCategoryPage from '../../support/pages/ProductCategoryPage'
+import HeaderSection from '../../support/pages/HeaderSection'
+import ProductCategoryPage from '../../support/pages/ProductCategoryPage'
 
 /// <reference types="cypress" />
 
 describe("Test Suite",function(){
+
+    const headerSection = new HeaderSection();
+    const productCategoryPage = new ProductCategoryPage();
     
     //fetch the url from Cypress.json from baseUrl key
     beforeEach(function(){
@@ -17,15 +20,16 @@ describe("Test Suite",function(){
         })
     })
 
-    it.only("aa",function(){
-        const a = this.testData.contentItem
-        cy.log(a)
-    })
+    // it.only("aa",function(){
+    //     const a = this.testData.contentItem
+    //     cy.log("aa-- "+a)
+    // })
 
 
     it("Add product to checkout",function(){
         const category = this.testData.category
         const itemOnContentPanel = this.testData.contentItem
+        cy.log(category)
 
         headerSection.selectCategory(category).getProductCategoryHeader().
         should('equal',this.testData.category)

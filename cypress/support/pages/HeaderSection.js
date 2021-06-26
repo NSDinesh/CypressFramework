@@ -1,17 +1,12 @@
-import  ProductCategoryPage from '../../support/pages/ProductCategoryPage'
+import  productCategoryPage from '../../support/pages/ProductCategoryPage'
 
-class HeaderSection{
+const categoryMenuLinks = ".categorymenu>li>a";
 
-    repo = {
-        categoryMenuLinks : ".categorymenu>li>a"
-    }
+export  default class HeaderSection{
 
     selectCategory(categoryName){
-       cy.get(this.repo.categoryMenuLinks).contains(categoryName).click()
-       return new ProductCategoryPage()
+       cy.get(".categorymenu>li>a").contains(categoryName).click();
+       return new productCategoryPage();
     }
 
 }
-
-const headerSection = new HeaderSection();
-export default headerSection;

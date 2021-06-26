@@ -9,7 +9,7 @@
     "json": false
   },
   "env":{
-    "testDataFile":"example.json"
+    "testDataFile":"testdata.json"
   }
 
 }
